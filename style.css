@@ -1,1 +1,34 @@
+:root {
+    --primary-color: #ff6b6b; /* 주 색상 (밝은 빨강/핑크 계열) */
+    --secondary-color: #555;   /* 보조 색상 (텍스트) */
+    --accent-color: #4ecdc4;  /* 강조 색상 (청록 계열) */
+    --light-gray: #f9f9f9;
+    --dark-gray: #333;
+}
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--secondary-color);
+    background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+ul {
+    list-style: none;
+}
