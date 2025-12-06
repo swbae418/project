@@ -87,3 +87,53 @@ ul {
     background-color: #ff8e8e;
     transform: translateY(-2px);
 }
+#main-header {
+    background: #fff;
+    color: var(--dark-gray);
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+#main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 로고 링크 스타일 */
+.logo-link {
+    text-decoration: none; 
+    color: var(--primary-color); 
+}
+
+.logo-link:hover {
+    color: var(--primary-color); 
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+#main-nav ul {
+    display: flex;
+}
+
+#main-nav ul li a {
+    color: var(--dark-gray);
+    padding: 10px 15px;
+    display: block;
+    font-weight: 500;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+#main-nav ul li a:hover,
+#main-nav ul li.active a {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
