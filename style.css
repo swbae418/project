@@ -200,3 +200,42 @@ ul {
     margin-top: 15px;
     font-weight: 700;
 }
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-item {
+    text-align: center;
+    padding: 40px 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    transition: background 0.3s ease;
+}
+
+.service-item:hover {
+    background: var(--accent-color);
+    color: #fff;
+}
+
+.service-item i {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.service-item:hover i {
+    color: #fff;
+}
+
+.service-item h4 {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 10px;
+}
+
+.service-item:hover h4, .service-item:hover p {
+    color: #fff;
+}
