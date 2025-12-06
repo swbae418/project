@@ -51,3 +51,12 @@ function scrollToSection(id) {
         });
     }
 }
+// 4. 스크롤 시 헤더 그림자 강조 (전문성/시각적 효과 추가)
+window.addEventListener('scroll', () => {
+    const header = document.getElementById('main-header');
+    if (window.scrollY > 50) {
+        header.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.2)';
+    } else {
+        header.style.boxShadow = '0 2px 5px rgba(0, 0, 0, 0.1)';
+    }
+});
