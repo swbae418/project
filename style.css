@@ -137,3 +137,26 @@ ul {
     color: var(--primary-color);
     border-bottom: 2px solid var(--primary-color);
 }
+#hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1920x800.png?text=High+Quality+Pet+Background+Image') no-repeat center center/cover;
+    color: #fff;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#hero h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease-out;
+}
+
+#hero p {
+    font-size: 1.3em;
+    margin-bottom: 40px;
+    font-weight: 300;
+    animation: fadeInUp 1s ease-out 0.5s forwards;
+    opacity: 0;
+}
