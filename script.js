@@ -42,4 +42,12 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
+// 3. 메인 버튼 스크롤 함수 (onclick 이벤트에서 호출)
+function scrollToSection(id) {
+    const section = document.getElementById(id);
+    if (section) {
+        section.scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
+}
