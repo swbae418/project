@@ -8,13 +8,56 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <style>
-        .detail-section { display: flex; flex-wrap: wrap; gap: 40px; margin-top: 40px; text-align: left; }
-        .detail-info { flex: 2; min-width: 300px; }
-        .detail-image { flex: 1; min-width: 250px; text-align: center; }
-        .detail-image img { max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .detail-section { 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 40px; 
+            margin-top: 40px; 
+            text-align: left; 
+            align-items: flex-start; /* 세로 늘어남 방지 */
+        }
+        
+        /* 사진 폭 설정: 정보 4, 이미지 1.75 비율로 조정 */
+        .detail-info { flex: 4; min-width: 350px; } 
+        
+        .detail-image { 
+            flex: 1.75; /* 이미지 폭 설정 */
+            min-width: 250px; 
+            text-align: center; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+            overflow: hidden; 
+            background-color: #fff; 
+            padding: 0; /* 흰색 테두리 제거 */
+        } 
+        
+        .detail-image img { 
+            width: 100%; 
+            max-width: 100%; 
+            height: auto; 
+            display: block; 
+            margin: 0; 
+            border-radius: 10px 10px 0 0; /* 이미지 상단 모서리만 둥글게 */
+        }
+        
+        .detail-image p {
+            margin-top: 0; 
+            padding: 10px 15px; 
+            margin-bottom: 0 !important; 
+            font-size: 0.9em; 
+            color: #777;
+        }
+
         .feature-list { list-style: none; padding: 0; }
         .feature-list li { margin-bottom: 20px; border-left: 4px solid var(--primary-color); padding-left: 15px; }
         .feature-list strong { display: block; margin-bottom: 5px; font-size: 1.1em; color: var(--dark-gray); }
+
+        @media (max-width: 768px) {
+            .detail-info, .detail-image {
+                flex: 1 1 100%;
+                min-width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -29,8 +72,7 @@
                     <li><a href="index.html#about">소개</a></li>
                     <li><a href="강아지.html">강아지 종류</a></li>
                     <li><a href="고양이.html">고양이 종류</a></li>
-                    <li class="active"><a href="물고기.html">물고기 종류</a></li>
-                    <li><a href="도마뱀.html">도마뱀 종류</a></li>
+                    <li class="active"><a href="물고기.html">물고기 종류</a></li> <li><a href="도마뱀.html">도마뱀 종류</a></li>
                     <li><a href="index.html#services">서비스</a></li>
                     <li><a href="index.html#contact">문의</a></li>
                 </ul>
@@ -40,8 +82,8 @@
 
     <section id="betta-detail" class="section-padding">
         <div class="container text-center">
-            <h2 class="section-title">🐟 베타 (Betta) 상세 정보</h2>
-            <p class="lead">화려하고 긴 지느러미가 특징이며, '투어(鬪魚)'라고 불릴 만큼 영역 다툼이 강한 아름다운 물고기입니다.</p>
+            <h2 class="section-title">🐠 베타 (Betta) 상세 정보</h2>
+            <p class="lead">화려한 지느러미와 강렬한 색채를 가진 아름다운 투어(鬪魚)입니다.</p>
             
             <div class="detail-section">
                 
@@ -50,40 +92,36 @@
                     <ul class="feature-list">
                         <li>
                             <strong>특징</strong>
-                            <p>화려한 지느러미와 몸 색깔이 특징입니다. 수컷끼리는 절대 합사가 불가능하며 (싸움), 아가미 호흡뿐만 아니라 공기 호흡(미로 기관)이 가능합니다. 수류가 강하면 스트레스로 지느러미를 자해할 수 있습니다.</p>
+                            <p>수컷의 경우 매우 크고 화려한 지느러미와 강한 영역 다툼 성향을 가집니다. 암컷은 수컷보다 수수하며, '투어'라는 별명처럼 수컷끼리는 합사가 불가능합니다.</p>
                         </li>
                         <li>
                             <strong>먹이</strong>
-                            <p>베타 전용 사료, 건조 장구벌레, 생먹이 등을 급여합니다. 위장이 작은 편이므로 과식은 피해야 하며, 한 번에 **베타 눈알 크기**만큼 (4~5알)만 급여하는 것이 좋습니다.</p>
+                            <p>주로 육식성이며, 베타 전용 사료나 건조 장구벌레, 실지렁이 등의 생먹이를 급여합니다. 과식하지 않도록 소량씩 급여하는 것이 중요합니다.</p>
                         </li>
                         <li>
                             <strong>수명</strong>
-                            <p>평균 2년, 환경이 최적화된 경우 3년까지 살 수 있습니다.</p>
+                            <p>2년 ~ 5년</p>
                         </li>
                         <li>
                             <strong>난이도</strong>
-                            <p>보통. 수질 변화에는 강하지만, **일정한 수온 유지**가 건강에 가장 중요합니다.</p>
+                            <p>쉬움~보통. 물의 용존 산소가 부족해도 호흡할 수 있는 '아가미 라비린스 기관'이 있어 비교적 키우기 쉽지만, 깨끗한 물과 온도 관리는 필수입니다.</p>
                         </li>
                         <li>
                             <strong>환경</strong>
-                            <p>적정 수온 25~27℃ (23~28℃), pH 6~7.5. 수온 변화를 막기 위해 히터 사용이 필수적이며, 수류가 약하거나 없는 환경을 선호합니다.</p>
+                            <p>수온 24~27℃를 유지해야 하며, 유속(물살)이 약한 환경을 선호합니다. 수컷은 반드시 단독 사육해야 하며, 수조 내에 숨을 공간이나 수초를 제공하면 안정감을 느낍니다.</p>
                         </li>
                     </ul>
                 </div>
                 
                 <div class="detail-image">
-                    <img src="
-
-[Image of a Betta fish]
-" alt="베타 투어">
-                    <p style="margin-top: 10px; font-size: 0.9em; color: #777;">화려한 지느러미가 매력적인 베타입니다.</p>
+                    <img src="images/betta.jpg" alt="화려한 베타 물고기">
+                    <p>수컷의 크고 아름다운 지느러미가 특징입니다.</p>
                 </div>
                 
             </div>
 
             <div style="margin-top: 50px;">
-                <a href="물고기.html" class="btn btn-primary" style="margin-right: 15px;">⬅️ 물고기 목록으로 돌아가기</a>
-                <a href="index.html" class="btn btn-secondary">🏠 메인 페이지로 이동</a>
+                <a href="물고기.html" class="btn btn-primary" style="margin-right: 15px;">⬅️ 물고기 목록으로 돌아가기</a> <a href="index.html" class="btn btn-secondary">🏠 메인 페이지로 이동</a>
             </div>
         </div>
     </section>
@@ -91,4 +129,10 @@
     <footer id="main-footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2025 LOVE
+                <p>&copy; 2025 LOVEPET. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

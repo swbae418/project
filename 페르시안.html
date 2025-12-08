@@ -8,13 +8,56 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <style>
-        .detail-section { display: flex; flex-wrap: wrap; gap: 40px; margin-top: 40px; text-align: left; }
-        .detail-info { flex: 2; min-width: 300px; }
-        .detail-image { flex: 1; min-width: 250px; text-align: center; }
-        .detail-image img { max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .detail-section { 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 40px; 
+            margin-top: 40px; 
+            text-align: left; 
+            align-items: flex-start; /* 세로 늘어남 방지 */
+        }
+        
+        /* 사진 폭 축소: 정보 4, 이미지 1.75 비율로 조정 */
+        .detail-info { flex: 4; min-width: 350px; } 
+        
+        .detail-image { 
+            flex: 1.75; /* 이미지 폭 축소 */
+            min-width: 250px; 
+            text-align: center; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+            overflow: hidden; 
+            background-color: #fff; 
+            padding: 0; /* 흰색 테두리 제거 */
+        } 
+        
+        .detail-image img { 
+            width: 100%; 
+            max-width: 100%; 
+            height: auto; 
+            display: block; 
+            margin: 0; 
+            border-radius: 10px 10px 0 0; /* 이미지 상단 모서리만 둥글게 */
+        }
+        
+        .detail-image p {
+            margin-top: 0; 
+            padding: 10px 15px; 
+            margin-bottom: 0 !important; 
+            font-size: 0.9em; 
+            color: #777;
+        }
+
         .feature-list { list-style: none; padding: 0; }
         .feature-list li { margin-bottom: 20px; border-left: 4px solid var(--primary-color); padding-left: 15px; }
         .feature-list strong { display: block; margin-bottom: 5px; font-size: 1.1em; color: var(--dark-gray); }
+
+        @media (max-width: 768px) {
+            .detail-info, .detail-image {
+                flex: 1 1 100%;
+                min-width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -72,11 +115,8 @@
                 </div>
                 
                 <div class="detail-image">
-                    <img src="
-
-[Image of a Persian cat]
-" alt="페르시안 고양이">
-                    <p style="margin-top: 10px; font-size: 0.9em; color: #777;">풍성한 장모와 평평한 얼굴이 특징입니다.</p>
+                    <img src="images/persian.jpg" alt="페르시안 고양이">
+                    <p>풍성한 장모와 평평한 얼굴이 특징입니다.</p>
                 </div>
                 
             </div>

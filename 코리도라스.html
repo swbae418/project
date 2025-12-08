@@ -8,13 +8,56 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <style>
-        .detail-section { display: flex; flex-wrap: wrap; gap: 40px; margin-top: 40px; text-align: left; }
-        .detail-info { flex: 2; min-width: 300px; }
-        .detail-image { flex: 1; min-width: 250px; text-align: center; }
-        .detail-image img { max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .detail-section { 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 40px; 
+            margin-top: 40px; 
+            text-align: left; 
+            align-items: flex-start; /* 세로 늘어남 방지 */
+        }
+        
+        /* 사진 폭 설정: 정보 4, 이미지 1.75 비율로 조정 */
+        .detail-info { flex: 4; min-width: 350px; } 
+        
+        .detail-image { 
+            flex: 1.75; /* 이미지 폭 설정 */
+            min-width: 250px; 
+            text-align: center; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+            overflow: hidden; 
+            background-color: #fff; 
+            padding: 0; /* 흰색 테두리 제거 */
+        } 
+        
+        .detail-image img { 
+            width: 100%; 
+            max-width: 100%; 
+            height: auto; 
+            display: block; 
+            margin: 0; 
+            border-radius: 10px 10px 0 0; /* 이미지 상단 모서리만 둥글게 */
+        }
+        
+        .detail-image p {
+            margin-top: 0; 
+            padding: 10px 15px; 
+            margin-bottom: 0 !important; 
+            font-size: 0.9em; 
+            color: #777;
+        }
+
         .feature-list { list-style: none; padding: 0; }
         .feature-list li { margin-bottom: 20px; border-left: 4px solid var(--primary-color); padding-left: 15px; }
         .feature-list strong { display: block; margin-bottom: 5px; font-size: 1.1em; color: var(--dark-gray); }
+
+        @media (max-width: 768px) {
+            .detail-info, .detail-image {
+                flex: 1 1 100%;
+                min-width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -29,8 +72,7 @@
                     <li><a href="index.html#about">소개</a></li>
                     <li><a href="강아지.html">강아지 종류</a></li>
                     <li><a href="고양이.html">고양이 종류</a></li>
-                    <li class="active"><a href="물고기.html">물고기 종류</a></li>
-                    <li><a href="도마뱀.html">도마뱀 종류</a></li>
+                    <li class="active"><a href="물고기.html">물고기 종류</a></li> <li><a href="도마뱀.html">도마뱀 종류</a></li>
                     <li><a href="index.html#services">서비스</a></li>
                     <li><a href="index.html#contact">문의</a></li>
                 </ul>
@@ -40,8 +82,8 @@
 
     <section id="corydoras-detail" class="section-padding">
         <div class="container text-center">
-            <h2 class="section-title">🐟 코리도라스 (Corydoras) 상세 정보</h2>
-            <p class="lead">순하고 평화로운 바닥층 어종으로, 수염을 이용해 바닥을 청소하는 귀여운 습성이 있습니다.</p>
+            <h2 class="section-title">🐠 코리도라스 (Corydoras) 상세 정보</h2>
+            <p class="lead">바닥을 청소하는 귀여운 습성으로 인기 있는 평화로운 갑옷 메기입니다.</p>
             
             <div class="detail-section">
                 
@@ -50,40 +92,36 @@
                     <ul class="feature-list">
                         <li>
                             <strong>특징</strong>
-                            <p>주로 어항 바닥층에서 활동하며 온순하여 대부분의 어종과 합사가 용이합니다. 수염으로 바닥재를 파헤쳐 먹이를 찾는 습성이 있습니다. 무리 지어 키우면 안정감을 느낍니다.</p>
+                            <p>작고 평화로운 성격의 갑옷 메기(Armored Catfish)입니다. 바닥에서 수염(바벨)을 이용해 먹이를 찾는 습성이 있습니다. 군영(떼 지어 다니는 습성)을 하므로 5마리 이상 함께 키우는 것이 좋습니다.</p>
                         </li>
                         <li>
                             <strong>먹이</strong>
-                            <p>잡식성이며 실지렁이나 냉동 장구벌레 등 생먹이를 선호합니다. 바닥 전용의 빨리 가라앉는 사료를 급여해야 합니다. 합사 시 먹이 경쟁에 밀려 굶지 않도록 주의해야 합니다.</p>
+                            <p>바닥에서 먹이를 먹는 저서성 어종이므로 침강성(가라앉는) 펠렛이나 전용 사료를 급여해야 합니다. 가끔 냉동 장구벌레나 브라인 슈림프를 보충해 줄 수 있습니다.</p>
                         </li>
                         <li>
                             <strong>수명</strong>
-                            <p>평균 3년 ~ 5년 (종류나 환경에 따라 10년 이상도 가능).</p>
+                            <p>3년 ~ 5년 (종에 따라 10년 이상)</p>
                         </li>
                         <li>
                             <strong>난이도</strong>
-                            <p>쉬움 ~ 보통. 수질 적응력은 높으나 고온(26℃ 이상)에 매우 취약하며, 산소 부족에 민감합니다.</p>
+                            <p>쉬움. 환경 적응력이 높고 튼튼해서 초보자에게 적합하지만, 바닥재가 더러우면 수염(바벨)을 다칠 수 있으므로 저면 청소에 신경 써야 합니다.</p>
                         </li>
                         <li>
                             <strong>환경</strong>
-                            <p>적정 수온 22~26℃, pH 약산성~중성. 수염 보호를 위해 부드러운 모래형 바닥재를 사용하는 것이 좋습니다. 활동량이 많아 여과력 확보에 신경 써야 합니다.</p>
+                            <p>수온 22~26℃를 선호합니다. 수염 보호를 위해 부드러운 모래나 미세한 입자의 바닥재를 사용해야 합니다. 수초나 유목 등 숨을 공간을 제공하면 안정감을 느낍니다.</p>
                         </li>
                     </ul>
                 </div>
                 
                 <div class="detail-image">
-                    <img src="
-
-[Image of a Corydoras fish]
-" alt="코리도라스 물고기">
-                    <p style="margin-top: 10px; font-size: 0.9em; color: #777;">바닥을 헤엄치는 평화로운 코리도라스입니다.</p>
+                    <img src="images/corydoras.jpg" alt="코리도라스 물고기">
+                    <p>수염과 짧은 지느러미가 귀여운 바닥 청소부입니다.</p>
                 </div>
                 
             </div>
 
             <div style="margin-top: 50px;">
-                <a href="물고기.html" class="btn btn-primary" style="margin-right: 15px;">⬅️ 물고기 목록으로 돌아가기</a>
-                <a href="index.html" class="btn btn-secondary">🏠 메인 페이지로 이동</a>
+                <a href="물고기.html" class="btn btn-primary" style="margin-right: 15px;">⬅️ 물고기 목록으로 돌아가기</a> <a href="index.html" class="btn btn-secondary">🏠 메인 페이지로 이동</a>
             </div>
         </div>
     </section>

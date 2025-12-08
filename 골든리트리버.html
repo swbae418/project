@@ -8,13 +8,56 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <style>
-        .detail-section { display: flex; flex-wrap: wrap; gap: 40px; margin-top: 40px; text-align: left; }
-        .detail-info { flex: 2; min-width: 300px; }
-        .detail-image { flex: 1; min-width: 250px; text-align: center; }
-        .detail-image img { max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .detail-section { 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 40px; 
+            margin-top: 40px; 
+            text-align: left; 
+            align-items: flex-start; /* 세로 늘어남 방지 */
+        }
+        
+        /* 사진 폭 축소: 정보 4, 이미지 1.75 비율로 조정 */
+        .detail-info { flex: 4; min-width: 350px; } 
+        
+        .detail-image { 
+            flex: 1.75; /* 이미지 폭 설정 */
+            min-width: 250px; 
+            text-align: center; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+            overflow: hidden; 
+            background-color: #fff; 
+            padding: 0; /* 흰색 테두리 제거 */
+        } 
+        
+        .detail-image img { 
+            width: 100%; 
+            max-width: 100%; 
+            height: auto; 
+            display: block; 
+            margin: 0; 
+            border-radius: 10px 10px 0 0; /* 이미지 상단 모서리만 둥글게 */
+        }
+        
+        .detail-image p {
+            margin-top: 0; 
+            padding: 10px 15px; 
+            margin-bottom: 0 !important; 
+            font-size: 0.9em; 
+            color: #777;
+        }
+
         .feature-list { list-style: none; padding: 0; }
         .feature-list li { margin-bottom: 20px; border-left: 4px solid var(--primary-color); padding-left: 15px; }
         .feature-list strong { display: block; margin-bottom: 5px; font-size: 1.1em; color: var(--dark-gray); }
+
+        @media (max-width: 768px) {
+            .detail-info, .detail-image {
+                flex: 1 1 100%;
+                min-width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -27,8 +70,7 @@
             <nav id="main-nav">
                 <ul>
                     <li><a href="index.html#about">소개</a></li>
-                    <li class="active"><a href="강아지.html">강아지 종류</a></li>
-                    <li><a href="고양이.html">고양이 종류</a></li>
+                    <li class="active"><a href="강아지.html">강아지 종류</a></li> <li><a href="고양이.html">고양이 종류</a></li>
                     <li><a href="물고기.html">물고기 종류</a></li>
                     <li><a href="도마뱀.html">도마뱀 종류</a></li>
                     <li><a href="index.html#services">서비스</a></li>
@@ -41,7 +83,7 @@
     <section id="golden-retriever-detail" class="section-padding">
         <div class="container text-center">
             <h2 class="section-title">🐕 골든 리트리버 (Golden Retriever) 상세 정보</h2>
-            <p class="lead">친절하고 온순하여 '천사견'으로 불리지만, 원래는 활동적인 수렵견 출신인 대형견입니다.</p>
+            <p class="lead">친근하고 지능적이며 활동적인 성격으로 유명한 인기 견종입니다.</p>
             
             <div class="detail-section">
                 
@@ -50,37 +92,36 @@
                     <ul class="feature-list">
                         <li>
                             <strong>특징</strong>
-                            <p>사람을 좋아하고 매우 사교적이며 온순합니다. 수영을 잘하고 물을 좋아하는 '물트리버'라는 별명이 있으며, 힘이 엄청 좋고 입을 쓰는 것(무는 행위)을 좋아하므로 교육이 중요합니다. 털 빠짐이 심합니다.</p>
+                            <p>다정하고 사람을 좋아하는 성격입니다. 뛰어난 지능과 학습 능력을 가지며, 헌신적이고 충성심이 강해 가정견 및 안내견으로 인기가 높습니다.</p>
                         </li>
                         <li>
                             <strong>먹이</strong>
-                            <p>먹성이 매우 좋아 비만에 취약합니다. 활동량에 맞춰 사료 정량을 지켜 규칙적으로 배식해야 하며, 체중 관리에 세심한 주의가 요구됩니다.</p>
+                            <p>활동량이 많으므로 고품질의 고단백 사료를 급여해야 합니다. 과체중이 되기 쉬우므로 비만을 방지하기 위해 식단 조절이 중요합니다.</p>
                         </li>
                         <li>
                             <strong>수명</strong>
-                            <p>10년 ~ 13년</p>
+                            <p>10년 ~ 12년</p>
                         </li>
                         <li>
                             <strong>난이도</strong>
-                            <p>어려움. 대형견 관리의 현실적인 어려움(털 빠짐, 배설물, 힘 등)이 크므로 초보 견주에게는 신중하게 고려할 것을 추천합니다.</p>
+                            <p>보통. 털 빠짐이 많은 편이라 꾸준한 빗질이 필요하며, 에너지가 넘치므로 충분한 운동량을 매일 확보해줘야 합니다.</p>
                         </li>
                         <li>
                             <strong>환경</strong>
-                            <p>실내외 모두 가능하지만, 대형견인 만큼 충분한 공간(대형)이 필요합니다. 높은 활동성을 만족시키기 위해 매일 충분한 운동과 산책이 필수적입니다.</p>
+                            <p>넓은 공간과 충분한 활동이 필요하므로 마당 있는 집이나 산책을 자주 시킬 수 있는 환경이 적합합니다. 가족과 함께하는 것을 가장 좋아합니다.</p>
                         </li>
                     </ul>
                 </div>
                 
                 <div class="detail-image">
-                    <img src="" alt="골든 리트리버 강아지">
-                    <p style="margin-top: 10px; font-size: 0.9em; color: #777;">금빛 털과 온순한 표정이 특징입니다.</p>
+                    <img src="images/golden_retriever.jpg" alt="골든 리트리버 강아지">
+                    <p>다정하고 온순한 성격으로 유명합니다.</p>
                 </div>
                 
             </div>
 
             <div style="margin-top: 50px;">
-                <a href="강아지.html" class="btn btn-primary" style="margin-right: 15px;">⬅️ 강아지 목록으로 돌아가기</a>
-                <a href="index.html" class="btn btn-secondary">🏠 메인 페이지로 이동</a>
+                <a href="강아지.html" class="btn btn-primary" style="margin-right: 15px;">⬅️ 강아지 목록으로 돌아가기</a> <a href="index.html" class="btn btn-secondary">🏠 메인 페이지로 이동</a>
             </div>
         </div>
     </section>
