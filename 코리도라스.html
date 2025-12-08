@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>코리도라스 | LOVEPET</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .detail-section { display: flex; flex-wrap: wrap; gap: 40px; margin-top: 40px; text-align: left; }
+        .detail-info { flex: 2; min-width: 300px; }
+        .detail-image { flex: 1; min-width: 250px; text-align: center; }
+        .detail-image img { max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .feature-list { list-style: none; padding: 0; }
+        .feature-list li { margin-bottom: 20px; border-left: 4px solid var(--primary-color); padding-left: 15px; }
+        .feature-list strong { display: block; margin-bottom: 5px; font-size: 1.1em; color: var(--dark-gray); }
+    </style>
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="container">
+            <a href="index.html" class="logo-link"> 
+                <h1 class="logo">LOVEPET <i class="fas fa-paw"></i></h1>
+            </a>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="index.html#about">소개</a></li>
+                    <li><a href="강아지.html">강아지 종류</a></li>
+                    <li><a href="고양이.html">고양이 종류</a></li>
+                    <li class="active"><a href="물고기.html">물고기 종류</a></li>
+                    <li><a href="도마뱀.html">도마뱀 종류</a></li>
+                    <li><a href="index.html#services">서비스</a></li>
+                    <li><a href="index.html#contact">문의</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="corydoras-detail" class="section-padding">
+        <div class="container text-center">
+            <h2 class="section-title">🐟 코리도라스 (Corydoras) 상세 정보</h2>
+            <p class="lead">순하고 평화로운 바닥층 어종으로, 수염을 이용해 바닥을 청소하는 귀여운 습성이 있습니다.</p>
+            
+            <div class="detail-section">
+                
+                <div class="detail-info">
+                    <h3>필수 케어 정보</h3>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>특징</strong>
+                            <p>주로 어항 바닥층에서 활동하며 온순하여 대부분의 어종과 합사가 용이합니다. 수염으로 바닥재를 파헤쳐 먹이를 찾는 습성이 있습니다. 무리 지어 키우면 안정감을 느낍니다.</p>
+                        </li>
+                        <li>
+                            <strong>먹이</strong>
+                            <p>잡식성이며 실지렁이나 냉동 장구벌레 등 생먹이를 선호합니다. 바닥 전용의 빨리 가라앉는 사료를 급여해야 합니다. 합사 시 먹이 경쟁에 밀려 굶지 않도록 주의해야 합니다.</p>
+                        </li>
+                        <li>
+                            <strong>수명</strong>
+                            <p>평균 3년 ~ 5년 (종류나 환경에 따라 10년 이상도 가능).</p>
+                        </li>
+                        <li>
+                            <strong>난이도</strong>
+                            <p>쉬움 ~ 보통. 수질 적응력은 높으나 고온(26℃ 이상)에 매우 취약하며, 산소 부족에 민감합니다.</p>
+                        </li>
+                        <li>
+                            <strong>환경</strong>
+                            <p>적정 수온 22~26℃, pH 약산성~중성. 수염 보호를 위해 부드러운 모래형 바닥재를 사용하는 것이 좋습니다. 활동량이 많아 여과력 확보에 신경 써야 합니다.</p>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="detail-image">
+                    <img src="
+
+[Image of a Corydoras fish]
+" alt="코리도라스 물고기">
+                    <p style="margin-top: 10px; font-size: 0.9em; color: #777;">바닥을 헤엄치는 평화로운 코리도라스입니다.</p>
+                </div>
+                
+            </div>
+
+            <div style="margin-top: 50px;">
+                <a href="물고기.html" class="btn btn-primary" style="margin-right: 15px;">⬅️ 물고기 목록으로 돌아가기</a>
+                <a href="index.html" class="btn btn-secondary">🏠 메인 페이지로 이동</a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 LOVEPET. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
