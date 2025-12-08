@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>진돗개 | LOVEPET</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .detail-section { display: flex; flex-wrap: wrap; gap: 40px; margin-top: 40px; text-align: left; }
+        .detail-info { flex: 2; min-width: 300px; }
+        .detail-image { flex: 1; min-width: 250px; text-align: center; }
+        .detail-image img { max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .feature-list { list-style: none; padding: 0; }
+        .feature-list li { margin-bottom: 20px; border-left: 4px solid var(--primary-color); padding-left: 15px; }
+        .feature-list strong { display: block; margin-bottom: 5px; font-size: 1.1em; color: var(--dark-gray); }
+    </style>
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="container">
+            <a href="index.html" class="logo-link"> 
+                <h1 class="logo">LOVEPET <i class="fas fa-paw"></i></h1>
+            </a>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="index.html#about">소개</a></li>
+                    <li class="active"><a href="강아지.html">강아지 종류</a></li>
+                    <li><a href="고양이.html">고양이 종류</a></li>
+                    <li><a href="물고기.html">물고기 종류</a></li>
+                    <li><a href="도마뱀.html">도마뱀 종류</a></li>
+                    <li><a href="index.html#services">서비스</a></li>
+                    <li><a href="index.html#contact">문의</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="jindo-detail" class="section-padding">
+        <div class="container text-center">
+            <h2 class="section-title">🐕 진돗개 (Jindo Dog) 상세 정보</h2>
+            <p class="lead">대한민국의 천연기념물로, 뛰어난 충성심과 용맹함, 높은 야생성을 가진 견종입니다.</p>
+            
+            <div class="detail-section">
+                
+                <div class="detail-info">
+                    <h3>필수 케어 정보</h3>
+                    <ul class="feature-list">
+                        <li>
+                            <strong>특징</strong>
+                            <p>충성심과 용맹함이 강하며, 경비견이나 사냥견으로 길러졌던 견종입니다. 야생성이 높아 환경 적응력과 생존 지능이 뛰어나며, 평소에는 얌전하고 점잖습니다. 자신의 영역을 깨끗이 유지하려는 경향이 있습니다.</p>
+                        </li>
+                        <li>
+                            <strong>먹이</strong>
+                            <p>자율 급식이 용이한 견종이지만, 비만 방지를 위해 규칙적인 배식이 권장됩니다. 식후에 격한 운동을 하면 위확장 염전증을 유발할 수 있으므로 피해야 합니다.</p>
+                        </li>
+                        <li>
+                            <strong>수명</strong>
+                            <p>12년 ~ 15년 (일반적인 중대형견 수명)</p>
+                        </li>
+                        <li>
+                            <strong>난이도</strong>
+                            <p>어려움. 활동량이 매우 많아 충분한 운동을 제공해야 하며, 강한 독립심과 영역 의식 때문에 어릴 때 충분한 사회화와 일관된 훈련이 매우 중요합니다.</p>
+                        </li>
+                        <li>
+                            <strong>환경</strong>
+                            <p>매일 규정적인 운동과 충분한 산책을 시켜줄 수 있는 환경이 필수입니다. 실내에서는 얌전하나, 에너지를 발산할 수 있는 넓은 공간이나 정기적인 야외 활동이 보장되어야 합니다.</p>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="detail-image">
+                    <img src="" alt="진돗개 강아지">
+                    <p style="margin-top: 10px; font-size: 0.9em; color: #777;">단단한 체형과 총명한 눈빛이 특징입니다.</p>
+                </div>
+                
+            </div>
+
+            <div style="margin-top: 50px;">
+                <a href="강아지.html" class="btn btn-primary" style="margin-right: 15px;">⬅️ 강아지 목록으로 돌아가기</a>
+                <a href="index.html" class="btn btn-secondary">🏠 메인 페이지로 이동</a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 LOVEPET. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
