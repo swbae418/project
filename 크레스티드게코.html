@@ -8,13 +8,56 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <style>
-        .detail-section { display: flex; flex-wrap: wrap; gap: 40px; margin-top: 40px; text-align: left; }
-        .detail-info { flex: 2; min-width: 300px; }
-        .detail-image { flex: 1; min-width: 250px; text-align: center; }
-        .detail-image img { max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .detail-section { 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 40px; 
+            margin-top: 40px; 
+            text-align: left; 
+            align-items: flex-start; /* 세로 늘어남 방지 */
+        }
+        
+        /* 사진 폭 설정: 정보 4, 이미지 1.75 비율로 조정 */
+        .detail-info { flex: 4; min-width: 350px; } 
+        
+        .detail-image { 
+            flex: 1.75; /* 이미지 폭 설정 */
+            min-width: 250px; 
+            text-align: center; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+            overflow: hidden; 
+            background-color: #fff; 
+            padding: 0; /* 흰색 테두리 제거 */
+        } 
+        
+        .detail-image img { 
+            width: 100%; 
+            max-width: 100%; 
+            height: auto; 
+            display: block; 
+            margin: 0; 
+            border-radius: 10px 10px 0 0; /* 이미지 상단 모서리만 둥글게 */
+        }
+        
+        .detail-image p {
+            margin-top: 0; 
+            padding: 10px 15px; 
+            margin-bottom: 0 !important; 
+            font-size: 0.9em; 
+            color: #777;
+        }
+
         .feature-list { list-style: none; padding: 0; }
         .feature-list li { margin-bottom: 20px; border-left: 4px solid var(--primary-color); padding-left: 15px; }
         .feature-list strong { display: block; margin-bottom: 5px; font-size: 1.1em; color: var(--dark-gray); }
+
+        @media (max-width: 768px) {
+            .detail-info, .detail-image {
+                flex: 1 1 100%;
+                min-width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -30,8 +73,7 @@
                     <li><a href="강아지.html">강아지 종류</a></li>
                     <li><a href="고양이.html">고양이 종류</a></li>
                     <li><a href="물고기.html">물고기 종류</a></li>
-                    <li class="active"><a href="도마뱀.html">도마뱀 종류</a></li>
-                    <li><a href="index.html#services">서비스</a></li>
+                    <li class="active"><a href="도마뱀.html">도마뱀 종류</a></li> <li><a href="index.html#services">서비스</a></li>
                     <li><a href="index.html#contact">문의</a></li>
                 </ul>
             </nav>
@@ -41,7 +83,7 @@
     <section id="crested-gecko-detail" class="section-padding">
         <div class="container text-center">
             <h2 class="section-title">🦎 크레스티드 게코 (Crested Gecko) 상세 정보</h2>
-            <p class="lead">속눈썹 도마뱀붙이로 유명하며, 온순하고 사육 환경이 까다롭지 않아 인기가 높습니다.</p>
+            <p class="lead">속눈썹과 머리 위 볏이 특징이며, 온순하고 키우기 쉬워 인기가 높은 도마뱀입니다.</p>
             
             <div class="detail-section">
                 
@@ -50,40 +92,36 @@
                     <ul class="feature-list">
                         <li>
                             <strong>특징</strong>
-                            <p>눈꺼풀이 없어 눈을 핥아 청소합니다. 머리 위에 뿔처럼 솟은 돌기(크레스트)가 특징입니다. 야행성/준야행성이며, 나무를 타는 습성이 강합니다.</p>
+                            <p>눈 위에 난 볏(크레스트)과 벽을 탈 수 있게 하는 발과 꼬리 끝의 흡반(빨판)이 특징입니다. 매우 온순하고 움직임이 느려 핸들링이 쉽습니다. 야행성입니다.</p>
                         </li>
                         <li>
                             <strong>먹이</strong>
-                            <p>잡식성 (과일, 곤충). 주식은 크레스티드 게코 전용 **분말 사료** (Pangea, Repashy 등)이며, 가끔 귀뚜라미나 밀웜 등을 보충하여 단백질을 공급합니다.</p>
+                            <p>주식은 전용 인공 사료(슈퍼푸드)입니다. 인공 사료만으로도 충분히 키울 수 있으며, 가끔 보조식으로 작은 귀뚜라미나 밀웜을 급여할 수 있습니다.</p>
                         </li>
                         <li>
                             <strong>수명</strong>
-                            <p>15년 ~ 20년 이상으로 매우 장수하는 편입니다.</p>
+                            <p>15년 ~ 20년</p>
                         </li>
                         <li>
                             <strong>난이도</strong>
-                            <p>쉬움. 온도와 습도 유지가 비교적 용이하여 레오파드 게코와 함께 초보자에게 추천됩니다.</p>
+                            <p>쉬움. 관리가 매우 쉽고, UV-B 램프가 필수가 아니며, 인공 사료 급여가 가능해 초보자에게 가장 많이 추천되는 파충류입니다.</p>
                         </li>
                         <li>
                             <strong>환경</strong>
-                            <p>적정 온도 **22~26℃** (고온에 매우 취약, 28℃ 이상 위험). 습도 60~80%의 촉촉한 환경이 필요하며, 높이가 높은 사육장과 유목, 덩굴 등 수직 활동 공간이 필수입니다.</p>
+                            <p>나무 위에서 생활하는 수목성 도마뱀이므로, 높이가 있는 사육장이 필요합니다. 온도 22~26℃, 습도 60~80%를 유지하는 것이 중요합니다. 매일 분무기로 물을 뿌려줘야 합니다.</p>
                         </li>
                     </ul>
                 </div>
                 
                 <div class="detail-image">
-                    <img src="
-
-[Image of a Crested Gecko lizard]
-" alt="크레스티드 게코 도마뱀붙이">
-                    <p style="margin-top: 10px; font-size: 0.9em; color: #777;">속눈썹과 높은 활동성이 특징입니다.</p>
+                    <img src="images/crested_gecko.jpg" alt="크레스티드 게코 도마뱀">
+                    <p>속눈썹처럼 보이는 머리 위의 볏이 매력적입니다.</p>
                 </div>
                 
             </div>
 
             <div style="margin-top: 50px;">
-                <a href="도마뱀.html" class="btn btn-primary" style="margin-right: 15px;">⬅️ 도마뱀 목록으로 돌아가기</a>
-                <a href="index.html" class="btn btn-secondary">🏠 메인 페이지로 이동</a>
+                <a href="도마뱀.html" class="btn btn-primary" style="margin-right: 15px;">⬅️ 도마뱀 목록으로 돌아가기</a> <a href="index.html" class="btn btn-secondary">🏠 메인 페이지로 이동</a>
             </div>
         </div>
     </section>
