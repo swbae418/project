@@ -8,13 +8,56 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <style>
-        .detail-section { display: flex; flex-wrap: wrap; gap: 40px; margin-top: 40px; text-align: left; }
-        .detail-info { flex: 2; min-width: 300px; }
-        .detail-image { flex: 1; min-width: 250px; text-align: center; }
-        .detail-image img { max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .detail-section { 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 40px; 
+            margin-top: 40px; 
+            text-align: left; 
+            align-items: flex-start; /* 세로 늘어남 방지 */
+        }
+        
+        /* 사진 폭 축소: 정보 4, 이미지 1.75 비율로 조정 */
+        .detail-info { flex: 4; min-width: 350px; } 
+        
+        .detail-image { 
+            flex: 1.75; /* 이미지 폭 축소 */
+            min-width: 250px; 
+            text-align: center; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+            overflow: hidden; 
+            background-color: #fff; 
+            padding: 0; /* 흰색 테두리 제거 */
+        } 
+        
+        .detail-image img { 
+            width: 100%; 
+            max-width: 100%; 
+            height: auto; 
+            display: block; 
+            margin: 0; 
+            border-radius: 10px 10px 0 0; /* 이미지 상단 모서리만 둥글게 */
+        }
+        
+        .detail-image p {
+            margin-top: 0; 
+            padding: 10px 15px; 
+            margin-bottom: 0 !important; 
+            font-size: 0.9em; 
+            color: #777;
+        }
+
         .feature-list { list-style: none; padding: 0; }
         .feature-list li { margin-bottom: 20px; border-left: 4px solid var(--primary-color); padding-left: 15px; }
         .feature-list strong { display: block; margin-bottom: 5px; font-size: 1.1em; color: var(--dark-gray); }
+
+        @media (max-width: 768px) {
+            .detail-info, .detail-image {
+                flex: 1 1 100%;
+                min-width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -41,7 +84,7 @@
     <section id="scottish-fold-detail" class="section-padding">
         <div class="container text-center">
             <h2 class="section-title">🐈 스코티시 폴드 (Scottish Fold) 상세 정보</h2>
-            <p class="lead">앞으로 접힌 귀와 동그란 얼굴로 '올빼미 고양이'라는 별명을 가진 품종입니다.</p>
+            <p class="lead">접힌 귀와 동그란 얼굴이 특징인, 다정하고 조용한 성격의 고양이입니다.</p>
             
             <div class="detail-section">
                 
@@ -50,11 +93,11 @@
                     <ul class="feature-list">
                         <li>
                             <strong>특징</strong>
-                            <p>귀가 앞으로 접혀 있고, 크고 둥근 눈과 둥근 얼굴이 특징입니다. 성격은 매우 온순하고 애교가 많으며, 사람에게 친화적이고 조용합니다.</p>
+                            <p>앞으로 접힌 귀와 크고 동그란 눈, 그리고 둥글고 단단한 체형이 특징입니다. 성격은 매우 온순하고 조용하며, 사람과 잘 어울리고 애정이 깊습니다.</p>
                         </li>
                         <li>
                             <strong>먹이</strong>
-                            <p>일반 고양이 사료를 급여합니다. 다만, 유전적으로 관절 질환에 취약할 수 있으므로, 수의사와 상담하여 관절 건강에 도움을 주는 영양제를 고려할 수 있습니다.</p>
+                            <p>활동량이 높지 않으므로 과체중이 되지 않도록 식단을 관리해야 합니다. 관절 건강에 도움을 줄 수 있는 영양제를 고려할 수 있습니다.</p>
                         </li>
                         <li>
                             <strong>수명</strong>
@@ -62,7 +105,7 @@
                         </li>
                         <li>
                             <strong>난이도</strong>
-                            <p>보통. 관절 질환에 대한 정기적인 검진이 필요합니다. 접힌 귀는 정기적으로 청소하여 감염을 예방해야 합니다.</p>
+                            <p>보통. 유전적인 관절 질환에 대한 정기적인 검진이 필요하며, 접힌 귀는 정기적으로 청소하여 감염을 예방해야 합니다.</p>
                         </li>
                         <li>
                             <strong>환경</strong>
@@ -72,11 +115,8 @@
                 </div>
                 
                 <div class="detail-image">
-                    <img src="
-
-[Image of a Scottish Fold cat]
-" alt="스코티시 폴드 고양이">
-                    <p style="margin-top: 10px; font-size: 0.9em; color: #777;">접힌 귀와 동그란 얼굴이 매력 포인트입니다.</p>
+                    <img src="images/scottish_fold.jpg" alt="스코티시 폴드 고양이">
+                    <p>접힌 귀와 동그란 얼굴이 매력 포인트입니다.</p>
                 </div>
                 
             </div>
